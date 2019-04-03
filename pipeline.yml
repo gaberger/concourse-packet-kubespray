@@ -1,0 +1,14 @@
+---
+resources:
+- name: concourse-packet-kubespray
+  type: git
+  source:
+    uri: https://github.com/gaberger/concourse-packet-kubespray.git
+    branch: master
+jobs:
+- name: setupenv
+  plan:
+  - get: concourse-packet-kubestrap
+  - task: setupenv
+    file: tasks/task1.yaml
+
