@@ -1,0 +1,10 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source: {repository: ubuntu:16.04}
+
+run:
+  path: ./tasks/setup-env.sh
+
